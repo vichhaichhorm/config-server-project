@@ -1,1 +1,40 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: api-gateway
+  main:
+    web-application-type: reactive
+  cloud:
+        gateway:
+          httpclient:
+            connect-timeout: 20000
+            response-timeout: 10s
+          routes:
+            - id: keycloak-admin-client
+              uri: lb://KEYCLOAK-ADMIN-CLIENT
+              predicates:
+                - Path=/api/v1/user/**, /keycloak-admin-client/v3/api-docs
+
+            - id: student-service
+              uri: lb://TASK-SERVICE
+              predicates:
+                - Path=/api/v1/task/**, /task-service/v3/api-docs
+          default-filters:
+            - name: DedupeResponseHeader
+              args:
+                strategy: RETAIN_FIRST
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    config-url: /v3/api-docs/swagger-config
+    urls:
+      - url: /v3/api-docs
+        name: API Gateway Service
+      - url: /keycloak-admin-client/v3/api-docs
+        name: Keycloak Admin Client Service
+      - url: /task-service/v3/api-docs
+        name: Task Service
 
