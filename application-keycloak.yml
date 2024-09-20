@@ -1,0 +1,23 @@
+server:
+  port: 9091
+
+spring:
+  application:
+    name: keycloak-admin-client
+
+openapi:
+  service:
+    title: Keycloak Admin Client Doc
+    version: 1.0.0
+    url: http://localhost:9090
+
+springdoc:
+  api-docs:
+    path: /keycloak-admin-client/v3/api-docs
+  swagger-ui:
+    path: /keycloak-admin-client/swagger-ui.html
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
