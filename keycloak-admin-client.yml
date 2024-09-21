@@ -23,6 +23,9 @@ springdoc:
     path: /keycloak-admin-client/v3/api-docs
   swagger-ui:
     path: /keycloak-admin-client/swagger-ui.html
+    oauth:
+      client-id: Mini-Project
+      client-secret: ZUBxXkJYEMkNWZDhBf6dEyua90e1QdpK
 
 keycloak:
   auth-server-url: http://localhost:8080
@@ -30,12 +33,7 @@ keycloak:
   clientId: Mini-Project
   clientSecret: ZUBxXkJYEMkNWZDhBf6dEyua90e1QdpK
 
-springdoc:
-  swagger-ui:
-    oauth:
-      client-id: Mini-Project
-      client-secret: ZUBxXkJYEMkNWZDhBf6dEyua90e1QdpK
-      
+
 management:
   tracing:
     sampling:
