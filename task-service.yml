@@ -35,7 +35,13 @@ springdoc:
     path: /task-service/v3/api-docs
   swagger-ui:
     path: /task-service/swagger-ui.html
-    
+
+springdoc:
+  swagger-ui:
+    oauth:
+      client-id: Mini-Project
+      client-secret: OC5Slit72vxCYbH7GmZaSA11XQLNUj6z
+      
 management:
   tracing:
     sampling:
