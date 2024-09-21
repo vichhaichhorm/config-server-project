@@ -1,13 +1,11 @@
 server:
   port: 9092
-  error:
-    include-stacktrace: never
-  
+
 spring:
   application:
     name: task-service
   datasource:
-    url: jdbc:postgresql://task_postgres:5432/mini_project_db
+    url: jdbc:postgresql://postgres:5432/mini_project_db
     username: postgres
     password: admin
   jpa:
@@ -26,7 +24,7 @@ eureka:
 
 openapi:
   service:
-    title: Keycloak Admin Client Doc
+    title: Task Service API
     version: 1.0.0
     url: http://localhost:9090
 
@@ -36,12 +34,6 @@ springdoc:
   swagger-ui:
     path: /task-service/swagger-ui.html
 
-springdoc:
-  swagger-ui:
-    oauth:
-      client-id: Mini-Project
-      client-secret: OC5Slit72vxCYbH7GmZaSA11XQLNUj6z
-      
 management:
   tracing:
     sampling:
