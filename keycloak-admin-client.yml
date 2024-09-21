@@ -6,6 +6,11 @@ server:
 spring:
   application:
     name: keycloak-admin-client
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/Mini-Project
 
 openapi:
   service:
