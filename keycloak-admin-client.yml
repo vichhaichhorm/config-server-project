@@ -28,13 +28,13 @@ keycloak:
   auth-server-url: http://localhost:8080
   realm: Mini-Project
   clientId: Mini-Project
-  clientSecret: OC5Slit72vxCYbH7GmZaSA11XQLNUj6z
+  clientSecret: ZUBxXkJYEMkNWZDhBf6dEyua90e1QdpK
 
 springdoc:
   swagger-ui:
     oauth:
       client-id: Mini-Project
-      client-secret: OC5Slit72vxCYbH7GmZaSA11XQLNUj6z
+      client-secret: ZUBxXkJYEMkNWZDhBf6dEyua90e1QdpK
       
 management:
   tracing:
