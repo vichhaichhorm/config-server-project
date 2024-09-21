@@ -19,6 +19,18 @@ springdoc:
   swagger-ui:
     path: /keycloak-admin-client/swagger-ui.html
 
+keycloak:
+  auth-server-url: http://localhost:8080
+  realm: Mini-Project
+  clientId: Mini-Project
+  clientSecret: OC5Slit72vxCYbH7GmZaSA11XQLNUj6z
+
+springdoc:
+  swagger-ui:
+    oauth:
+      client-id: Mini-Project
+      client-secret: OC5Slit72vxCYbH7GmZaSA11XQLNUj6z
+      
 management:
   tracing:
     sampling:
