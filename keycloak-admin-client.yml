@@ -1,3 +1,5 @@
+# keycloak-admin-client.yml
+
 server:
   port: 9091
   error:
@@ -17,7 +19,7 @@ keycloak:
   realm: Mini-Project
   clientId: Mini-Project
   clientSecret: ZUBxXkJYEMkNWZDhBf6dEyua90e1QdpK
-  
+
 openapi:
   service:
     title: Keycloak Admin Client Doc
@@ -32,12 +34,12 @@ springdoc:
     oauth:
       client-id: Mini-Project
       client-secret: ZUBxXkJYEMkNWZDhBf6dEyua90e1QdpK
-      
+
 management:
   tracing:
     sampling:
-      probability: 1.0
+      probability: 1
+
 logging:
   level:
     root: DEBUG
-
