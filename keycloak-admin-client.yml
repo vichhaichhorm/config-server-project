@@ -12,6 +12,12 @@ spring:
         jwt:
           issuer-uri: http://localhost:8080/realms/Mini-Project
 
+keycloak:
+  auth-server-url: http://localhost:8080
+  realm: Mini-Project
+  clientId: Mini-Project
+  clientSecret: ZUBxXkJYEMkNWZDhBf6dEyua90e1QdpK
+  
 openapi:
   service:
     title: Keycloak Admin Client Doc
@@ -26,14 +32,7 @@ springdoc:
     oauth:
       client-id: Mini-Project
       client-secret: ZUBxXkJYEMkNWZDhBf6dEyua90e1QdpK
-
-keycloak:
-  auth-server-url: http://localhost:8080
-  realm: Mini-Project
-  clientId: Mini-Project
-  clientSecret: ZUBxXkJYEMkNWZDhBf6dEyua90e1QdpK
-
-
+      
 management:
   tracing:
     sampling:
