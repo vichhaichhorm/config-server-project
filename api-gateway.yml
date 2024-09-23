@@ -1,3 +1,10 @@
+#spring:
+#  profiles:
+#    active: native
+#  config:
+#    name: api-gateway
+#    import: optional:configserver:http://localhost:8888
+
 server:
   port: 9090
 
@@ -7,35 +14,25 @@ spring:
   main:
     web-application-type: reactive
   cloud:
-        gateway:
-          httpclient:
-            connect-timeout: 20000
-            response-timeout: 10s
-          routes:
-            - id: keycloak-admin-client
-              uri: lb://KEYCLOAK-ADMIN-CLIENT
-              predicates:
-                - Path=/api/v1/user/**, /keycloak-admin-client/v3/api-docs
-
-            - id: student-service
-              uri: lb://TASK-SERVICE
-              predicates:
-                - Path=/api/v1/task/**, /task-service/v3/api-docs
-          default-filters:
-            - name: DedupeResponseHeader
-              args:
-                strategy: RETAIN_FIRST
-
-management:
-  tracing:
-    sampling:
-      probability: 1.0
-logging:
-  level:
-    root: DEBUG
+    gateway:
+      httpclient:
+        connect-timeout: 20000
+        response-timeout: 10s
+      routes:
+        - id: keycloak-admin-client
+          uri: lb://KEYCLOAK-ADMIN-CLIENT
+          predicates:
+            - Path=/api/v1/users/**, /keycloak-admin-client/v3/api-docs
+        - id: task-service
+          uri: lb://TASK-SERVICE
+          predicates:
+            - Path=/api/v1/tasks/**, /task-service/v3/api-docs
 
 springdoc:
   swagger-ui:
+    oauth:
+      client-id: Mini-Project
+      client-secret: ZUBxXkJYEMkNWZDhBf6dEyua90e1QdpK
     path: /swagger-ui.html
     config-url: /v3/api-docs/swagger-config
     urls:
@@ -45,4 +42,3 @@ springdoc:
         name: Keycloak Admin Client Service
       - url: /task-service/v3/api-docs
         name: Task Service
-
