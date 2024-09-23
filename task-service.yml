@@ -4,6 +4,7 @@ spring:
       resource-server:
         jwt:
           issuer-uri: http://localhost:8080/realms/Mini-Project
+          jwk-set-uri: http://localhost:8080/realms/Mini-Project/protocol/openid-connect/certs
   application:
     name: task-service
   datasource:
