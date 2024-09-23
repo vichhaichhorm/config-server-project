@@ -12,11 +12,11 @@ spring:
         - id: keycloak-admin-client
           uri: lb://KEYCLOAK-ADMIN-CLIENT
           predicates:
-            - Path=/api/v1/users/**, /keycloak-admin-client/v3/api-docs
+            - Path=/api/v1/user/**, /keycloak-admin-client/v3/api-docs
         - id: task-service
           uri: lb://TASK-SERVICE
           predicates:
-            - Path=/api/v1/tasks/**, /task-service/v3/api-docs
+            - Path=/api/v1/task/**, /task-service/v3/api-docs
 springdoc:
   swagger-ui:
     oauth:
