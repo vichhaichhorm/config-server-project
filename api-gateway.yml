@@ -17,7 +17,8 @@ spring:
           uri: lb://TASK-SERVICE
           predicates:
             - Path=/api/v1/tasks/**, /task-service/v3/api-docs
-
+server:
+  port: 9191
 springdoc:
   swagger-ui:
     oauth:
