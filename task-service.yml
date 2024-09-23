@@ -7,10 +7,6 @@ spring:
           jwk-set-uri: http://localhost:8080/realms/Mini-Project/protocol/openid-connect/certs
   application:
     name: task-service
-  datasource:
-    url: jdbc:postgresql://localhost:5432/mini_project_db
-    username: postgres
-    password: admin
   jpa:
     show-sql: true
     hibernate:
