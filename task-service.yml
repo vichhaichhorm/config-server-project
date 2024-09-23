@@ -5,7 +5,7 @@ spring:
   application:
     name: task-service
   datasource:
-    url: jdbc:postgresql://task_postgres:5432/mini_project_db
+    url: jdbc:postgresql://localhost:5432/mini_project_db
     username: postgres
     password: admin
   jpa:
