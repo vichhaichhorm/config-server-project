@@ -9,11 +9,11 @@ spring:
         connect-timeout: 20000
         response-timeout: 10s
       routes:
-        - id: keycloak-admin-client
+        - id: user
           uri: lb://KEYCLOAK-ADMIN-CLIENT
           predicates:
             - Path=/api/v1/user/**, /keycloak-admin-client/v3/api-docs
-        - id: keycloak-admin-client-group
+        - id: group
           uri: lb://KEYCLOAK-ADMIN-CLIENT
           predicates:
             - Path=/api/v1/group/**, /keycloak-admin-client/v3/api-docs
