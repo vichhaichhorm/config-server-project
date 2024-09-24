@@ -9,24 +9,14 @@ spring:
         connect-timeout: 20000
         response-timeout: 10s
       routes:
-        - id: keycloak-admin-client-user
-          uri: lb://KEYCLOAK-ADMIN-CLIENT
-          predicates:
-            - Path=/api/v1/user/**
-        - id: keycloak-admin-client-group
-          uri: lb://KEYCLOAK-ADMIN-CLIENT
-          predicates:
-            - Path=/api/v1/group/**
-        - id: keycloak-admin-client-docs
+        - id: keycloak-admin-client
           uri: lb://KEYCLOAK-ADMIN-CLIENT
           predicates:
             - Path=/keycloak-admin-client/v3/api-docs
         - id: task-service
           uri: lb://TASK-SERVICE
           predicates:
-            - Path=/api/v1/task/**
             - Path=/task-service/v3/api-docs
-
 springdoc:
   swagger-ui:
     oauth:
