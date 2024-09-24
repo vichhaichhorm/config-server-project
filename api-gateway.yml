@@ -13,9 +13,6 @@ spring:
           uri: lb://KEYCLOAK-ADMIN-CLIENT
           predicates:
             - Path=/api/v1/user/**, /keycloak-admin-client/v3/api-docs
-        - id: keycloak-admin-client-group
-          uri: lb://KEYCLOAK-ADMIN-CLIENT
-          predicates:
             - Path=/api/v1/group/**, /keycloak-admin-client/v3/api-docs
         - id: task-service
           uri: lb://TASK-SERVICE
