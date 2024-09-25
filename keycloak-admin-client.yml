@@ -11,8 +11,7 @@ keycloak:
   auth-server-url: http://localhost:8080
   realm: Mini-Project
   clientId: Mini-Project
-#  clientSecret: HC3neQnSa1iDHx37zR66kPxPLdKpGHiY
-  clientSecret: lQwAAOOHnMBT7PosqbphOnz1KM5f9hsA
+  clientSecret: DzoapK14Ugh8TmCnd2F0tAzn873jrIS7
 
 springdoc:
   api-docs:
