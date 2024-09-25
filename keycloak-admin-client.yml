@@ -21,4 +21,4 @@ springdoc:
     path: /keycloak-admin-client/swagger-ui.html
     oauth:
       client-id: Mini-Project
-      client-secret: u5KvrzDUElxASnYKsCSWCYAotLO3dYBo
+      client-secret: DzoapK14Ugh8TmCnd2F0tAzn873jrIS7
